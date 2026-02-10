@@ -18,6 +18,7 @@ class ActiveSupport::TestCase
   # テストユーザーとしてログインする
   def log_in_as(user)
     session[:user_id] = user.id
+    session[:session_token] = user.session_token
   end
 end
 
