@@ -7,7 +7,7 @@ document.addEventListener("turbo:load", function() {
     hamburger.addEventListener("click", function(event) {
       event.preventDefault();
       let menu = document.querySelector("#navbar-menu");
-      menu.classList.toggle("collapse");
+      menu.classList.toggle("show");
     });
   }
 
@@ -16,7 +16,7 @@ document.addEventListener("turbo:load", function() {
     account.addEventListener("click", function(event) {
       event.preventDefault();
       let menu = document.querySelector("#dropdown-menu");
-      menu.classList.toggle("active");
+      menu.classList.toggle("show");
     });
   }
 });
