@@ -94,7 +94,7 @@ class User < ApplicationRecord
 
   # ユーザーをフォローする
   def follow(other_user)
-    following << other_user unless self == other_user
+    following << other_user unless following?(other_user) || self == other_user
   end
 
   # ユーザーをフォロー解除する

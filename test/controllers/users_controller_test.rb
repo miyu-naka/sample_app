@@ -81,4 +81,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get followers_user_path(@user)
     assert_redirected_to login_url
   end
+
+  test "should redirect show when user not activated" do
+    get user_path(users(:non_activated))
+    assert_redirected_to root_url
+  end
 end
